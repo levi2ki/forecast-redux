@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 
 export default class SearchBar extends Component {
@@ -9,8 +9,9 @@ export default class SearchBar extends Component {
 
     handleChange = (event) => this.setState({term: event.target.value});
     onFromSubmit = (event) => {
-      event.preventDefault();
-      // @todo: fetch weather data
+        event.preventDefault();
+        this.props.fetchWeather(this.state.term);
+        this.setState({term: ''});
     };
 
     render() {
