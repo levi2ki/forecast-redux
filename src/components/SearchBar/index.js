@@ -4,14 +4,14 @@ import React, { Component } from 'react';
 export default class SearchBar extends Component {
     constructor(props) {
         super(props);
-        this.state = {term: ''};
+        this.state = { term: '' };
     }
 
-    handleChange = (event) => this.setState({term: event.target.value});
+    handleChange = (event) => this.setState({ term: event.target.value });
     onFromSubmit = (event) => {
         event.preventDefault();
         this.props.fetchWeather(this.state.term);
-        this.setState({term: ''});
+        this.setState({ term: '' });
     };
 
     render() {
