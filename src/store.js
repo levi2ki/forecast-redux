@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import reducers from './reducers';
 import ReduxPromise from 'redux-promise';
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
-export default createStoreWithMiddleware(reducers);
+export default createStore(reducers, composeEnhancers(applyMiddleware(ReduxPromise)));
