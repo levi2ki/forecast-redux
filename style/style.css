@@ -1,0 +1,8 @@
+.table-item {
+  vertical-align: bottom !important;
+}
+
+.g-map > div {
+  width: 180px;
+  height: 150px;
+}

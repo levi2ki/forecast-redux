@@ -17,9 +17,11 @@
     "babel-preset-react": "^6.1.18",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
+    "css-loader": "^0.28.11",
     "jquery": "^2.2.1",
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
+    "prop-types": "^15.6.1",
     "react-addons-test-utils": "^0.14.7",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"

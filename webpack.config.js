@@ -9,11 +9,15 @@ module.exports = {
   },
   module: {
     loaders: [{
+      test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
         presets: ['react', 'env', 'stage-0']
       }
+    },{
+      test: /\.css$/,
+      loader: 'css-loader',
     }]
   },
   resolve: {
